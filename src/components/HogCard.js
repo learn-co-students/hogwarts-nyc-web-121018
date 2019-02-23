@@ -14,10 +14,19 @@ class HogCard extends Component {
   // console.log(props);
   render() {
     return (
-      <div>
-        <h1>{this.props.hog.name}</h1>
-        <img src={this.props.image} onClick={this.handleClick} />
-        {this.state.showDetail ? <HogDetail hog={this.props.hog} /> : null}
+      <div className='card'>
+        <div className='image'>
+          <img src={this.props.image} onClick={this.handleClick} />
+        </div>
+        <div className='content'>
+          <div className='header'>{this.props.hog.name}</div>
+          <div className='meta'>
+            <a>Hogwarts Hog</a>
+          </div>
+          <div className='description'>
+            {this.state.showDetail ? <HogDetail hog={this.props.hog} /> : null}
+          </div>
+        </div>
       </div>
     );
   }

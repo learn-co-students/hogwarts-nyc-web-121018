@@ -38,6 +38,6 @@ export default class HogContainer extends Component {
 
   render() {
     console.log(this.renderHogs());
-    return <div>{this.renderHogs()}</div>;
+    return <div className='ui link cards'>{this.renderHogs()}</div>;
   }
 }
